@@ -10,7 +10,9 @@ const PORT = process.env.PORT || 8080;
 
 dbConnect();
 
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 app.use(express.json());
 
 app.get("/", (req, res) => {
